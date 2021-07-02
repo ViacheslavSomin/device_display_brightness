@@ -1,0 +1,25 @@
+name: device_display_brightness
+description: A Flutter plugin to manage the device's display brightness on Android and iOS.
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.20.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.sominviacheslav.device_display_brightness
+        pluginClass: DeviceDisplayBrightnessPlugin
+      ios:
+        pluginClass: DeviceDisplayBrightnessPlugin
