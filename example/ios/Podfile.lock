@@ -1,0 +1,22 @@
+PODS:
+  - device_display_brightness (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - device_display_brightness (from `.symlinks/plugins/device_display_brightness/ios`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  device_display_brightness:
+    :path: ".symlinks/plugins/device_display_brightness/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  device_display_brightness: 3a427441a6cf842b94a257c955d08efb9a43893d
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.10.1

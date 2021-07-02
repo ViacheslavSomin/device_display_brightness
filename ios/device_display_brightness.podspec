@@ -5,14 +5,11 @@
 Pod::Spec.new do |s|
   s.name             = 'device_display_brightness'
   s.version          = '0.0.1'
-  s.summary          = 'A new flutter plugin project.'
-  s.description      = <<-DESC
-A new flutter plugin project.
-                       DESC
-  s.homepage         = 'http://example.com'
+  s.summary          = 'A Flutter plugin to manage the device\'s display brightness on Android and iOS.'
+  s.homepage         = 'https://github.com/SVD13/device_display_brightness'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
-  s.source           = { :path => '.' }
+  s.author           = { 'Somin Viacheslav' => 'somin.viacheslav@gmail.com' }
+  s.source           = { :path => 'https://github.com/SVD13/device_display_brightness' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
   s.platform = :ios, '8.0'
