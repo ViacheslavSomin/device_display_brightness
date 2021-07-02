@@ -1,13 +1,13 @@
 # device_display_brightness
 
-![Pub][pub_badge]
+[![pub package](https://img.shields.io/pub/v/device_display_brightness.svg?label=device_display_brightness&color=black)](https://pub.dartlang.org/packages/device_display_brightness)
 
 A Flutter plugin to manage the device's display brightness on Android and iOS.
 
 ## Usage
 
-
 ## Android setup
+
 Add this permission to AndroidManifest.xml
 
 ```xml
@@ -17,7 +17,6 @@ Add this permission to AndroidManifest.xml
 ## iOS setup
 
 No setup needed.
-
 
 ## Install
 
@@ -54,6 +53,6 @@ DeviceDisplayBrightness.keepOn(isOn: true);
 DeviceDisplayBrightness.resetBrightness();
 ```
 
-
 <!-- Links -->
+
 [pub_badge]: https://img.shields.io/pub/v/device_display_brightness.svg
