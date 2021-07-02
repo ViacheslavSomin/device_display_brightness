@@ -12,24 +12,16 @@ class DeviceDisplayBrightness {
     return await _channel.invokeMethod<double>('getBrightness') ?? 0;
   }
 
-  /// For Android [brightness] can be used to override the user's preferred brightness of
-  /// the screen.  A value of less than 0 means to use the
-  /// preferred screen brightness. 0 to 1 adjusts the brightness from
+  /// [brightness] can be used to override the user's preferred brightness of
+  /// the screen. 0 to 1 adjusts the brightness from
   /// dark to full bright.
   static Future<void> setBrightness(double brightness) async {
-    double _brightness = brightness;
-    if (Platform.isIOS) {
-      _brightness.clamp(0.0, 1.0);
-    } else if (Platform.isAndroid) {
-      _brightness.clamp(double.negativeInfinity, 1.0);
-    } else {
-      return;
+    if (Platform.isIOS || Platform.isAndroid) {
+      return _channel.invokeMethod(
+        'setBrightness',
+        {'brightness': brightness.clamp(0.0, 1.0)},
+      );
     }
-
-    return _channel.invokeMethod(
-      'setBrightness',
-      {'brightness': brightness},
-    );
   }
 
   /// Resets brightness to system value.
