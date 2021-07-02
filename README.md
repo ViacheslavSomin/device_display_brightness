@@ -1,6 +1,6 @@
 # device_display_brightness
 
-[![Pub][pub_badge]][pub]
+![Pub][pub_badge]
 
 A Flutter plugin to manage the device's display brightness on Android and iOS.
 
