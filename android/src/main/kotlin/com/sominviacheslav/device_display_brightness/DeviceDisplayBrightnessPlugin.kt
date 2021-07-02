@@ -19,7 +19,7 @@ class DeviceDisplayBrightnessPlugin : FlutterPlugin, ActivityAware, MethodCallHa
     private var activity: Activity? = null
 
     override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "device_display_brightness")
+        channel = MethodChannel(flutterPluginBinding.binaryMessenger, METHOD_CHANNEL)
         channel.setMethodCallHandler(this)
     }
 
@@ -117,6 +117,10 @@ class DeviceDisplayBrightnessPlugin : FlutterPlugin, ActivityAware, MethodCallHa
         } else {
             activity?.window?.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         }
+    }
+
+    companion object {
+        const val METHOD_CHANNEL = "github.com/SVD13/device_display_brightness"
     }
 
 }

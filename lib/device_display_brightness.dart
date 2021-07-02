@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 
 class DeviceDisplayBrightness {
   static const MethodChannel _channel =
-      const MethodChannel('device_display_brightness');
+      const MethodChannel('github.com/SVD13/device_display_brightness');
 
   /// Returns the display backlight brightness between 0 and 1.
   static Future<double> getBrightness() async {
