@@ -1,6 +1,6 @@
 # device_display_brightness
 
-[![Pub][pub_badge]][pub]
+[pub_badge]
 
 A Flutter plugin to manage the device's display brightness on Android and iOS.
 
@@ -8,7 +8,7 @@ A Flutter plugin to manage the device's display brightness on Android and iOS.
 
 
 ## Android setup
-For Android, add this permission to AndroidManifest.xml
+Add this permission to AndroidManifest.xml
 
 ```xml
 <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -16,7 +16,7 @@ For Android, add this permission to AndroidManifest.xml
 
 ## iOS setup
 
-For ios no setup needed.
+No setup needed.
 
 
 ## Install
