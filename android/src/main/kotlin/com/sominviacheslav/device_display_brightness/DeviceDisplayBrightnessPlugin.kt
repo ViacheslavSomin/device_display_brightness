@@ -39,8 +39,8 @@ class DeviceDisplayBrightnessPlugin : FlutterPlugin, ActivityAware, MethodCallHa
                 result.success(isKeptOn())
             }
             "keepOn" -> {
-                val on: Boolean = call.argument("on")!!
-                keepOn(on)
+                val enabled: Boolean = call.argument("enabled")!!
+                keepOn(enabled)
                 result.success(null)
             }
             else -> result.notImplemented()
@@ -111,8 +111,8 @@ class DeviceDisplayBrightnessPlugin : FlutterPlugin, ActivityAware, MethodCallHa
         return (flags != null) && (flags and WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON != 0)
     }
 
-    private fun keepOn(on: Boolean) {
-        if (on) {
+    private fun keepOn(enabled: Boolean) {
+        if (enabled) {
             activity?.window?.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         } else {
             activity?.window?.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)

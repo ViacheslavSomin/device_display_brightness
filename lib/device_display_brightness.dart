@@ -12,9 +12,16 @@ class DeviceDisplayBrightness {
     return await _channel.invokeMethod<double>('getBrightness') ?? 0;
   }
 
-  /// [brightness] can be used to override the user's preferred brightness of
-  /// the screen. 0 to 1 adjusts the brightness from
-  /// dark to full bright.
+  /// The value of [brightness] should be a number between 0.0 and 1.0, inclusive.
+  ///
+  /// In iOS:
+  /// Brightness changes made by an app remain in effect until
+  /// the device is locked, regardless of whether the app is closed.
+  /// The system brightness (which the user can set in Settings or Control Center)
+  /// is restored the next time the display is turned on.
+  ///
+  /// In Android:
+  /// This method overrides system brightness while the app is in the foreground.
   static Future<void> setBrightness(double brightness) async {
     if (Platform.isIOS || Platform.isAndroid) {
       return _channel.invokeMethod(
@@ -37,11 +44,11 @@ class DeviceDisplayBrightness {
     return await _channel.invokeMethod<bool>('isKeptOn') ?? false;
   }
 
-  /// If [isOn] == `true`, the device's screen will be keeping turned on.
-  static Future<void> keepOn({required bool isOn}) async {
+  /// If [enabled] == `true`, the device's screen will be keeping turned on.
+  static Future<void> keepOn({required bool enabled}) async {
     return _channel.invokeMethod(
       'keepOn',
-      {'on': isOn},
+      {'enabled': enabled},
     );
   }
 }

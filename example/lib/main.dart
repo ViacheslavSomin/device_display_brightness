@@ -90,13 +90,13 @@ class _MyAppState extends State<MyApp> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  DeviceDisplayBrightness.keepOn(isOn: true);
+                  DeviceDisplayBrightness.keepOn(enabled: true);
                 },
                 child: Text('Enable keepOn'),
               ),
               ElevatedButton(
                 onPressed: () {
-                  DeviceDisplayBrightness.keepOn(isOn: false);
+                  DeviceDisplayBrightness.keepOn(enabled: false);
                 },
                 child: Text('Disable keepOn'),
               ),

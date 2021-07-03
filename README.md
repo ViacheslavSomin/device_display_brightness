@@ -46,7 +46,7 @@ double brightness = await DeviceDisplayBrightness.getBrightness();
 bool isKeptOn = await DeviceDisplayBrightness.isKeptOn();
 
 // Prevent display from going into sleep mode:
-DeviceDisplayBrightness.keepOn(isOn: true);
+DeviceDisplayBrightness.keepOn(enabled: true);
 
 // Android only
 // Resets brightness to system value.

@@ -25,7 +25,7 @@ public class SwiftDeviceDisplayBrightnessPlugin: NSObject, FlutterPlugin {
             break
         case "keepOn":
             if let arguments = call.arguments as? [String:Any] {
-                let isOn: Bool = arguments["on"] as! Bool
+                let isOn: Bool = arguments["enabled"] as! Bool
                 UIApplication.shared.isIdleTimerDisabled = isOn
             }
             break

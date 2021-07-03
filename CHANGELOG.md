@@ -1,3 +1,3 @@
-## 0.0.4
+## 0.0.5
 
-- Added iOS support.
+- Documentation update.
