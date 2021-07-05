@@ -31,10 +31,14 @@ class DeviceDisplayBrightness {
     }
   }
 
+  /// In iOS:
+  /// Resets brightness to last known system value.
+  /// System value is fetched, when app starts.
+  ///
+  /// In Android:
   /// Resets brightness to system value.
-  /// Has no effect on iOS.
   static Future<void> resetBrightness() async {
-    if (Platform.isAndroid) {
+    if (Platform.isIOS || Platform.isAndroid) {
       return await _channel.invokeMethod('resetBrightness');
     }
   }
